@@ -107,6 +107,7 @@ export function ViewAppointment({isOpen, onClose, appointment}) {
             <ModalBody>
               <Flex
                 alignItems='center'
+                flexDirection={{base: 'column', sm: 'row'}}
               >
                 <DatePicker
                   selected={startDate}

@@ -107,6 +107,7 @@ export function ViewAppointment({isOpen, onClose, appointment}) {
             <ModalBody>
               <Flex
                 alignItems='center'
+                flexDirection={{base: 'column', sm: 'row'}}
               >
                 <DatePicker
                   selected={startDate}
@@ -118,7 +119,7 @@ export function ViewAppointment({isOpen, onClose, appointment}) {
                   customInput={<DatePickerInput label='Início' />}
                   disabled={appointment.status === 'completo'}
                 />
-                <Text fontWeight='bold' mx={{sm: 4, md: 6}} fontSize={{sm: 'sm', md: 'md'}}>até</Text>
+                <Text fontWeight='bold' mx={{sm: 4, md: 6}}  fontSize={{sm: 'sm', md: 'md'}}>até</Text>
                 <DatePicker
                   selected={endDate}
                   onChange={(date) => setEndDate(date)}
