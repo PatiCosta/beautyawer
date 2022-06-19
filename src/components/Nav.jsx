@@ -43,7 +43,7 @@ function NavButton({linkTo, title, icon}) {
 }
 
 export function Nav() {
-    const location = window.location.href.replace('https://https://beautyawer.vercel.app/', '')
+    const location = window.location.href.replace('https://https://beautyawer.vercel.app', '')
     const isLargerThanLg = useBreakpointValue({ base: false, xl: true })
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = useRef()
@@ -102,7 +102,7 @@ export function Nav() {
                     <Flex my={2}>
                         <Button
                             colorScheme='gunmetal'
-                            color={(location === 'https://https://beautyawer.vercel.app/') ? 'tartOrange.500' : 'ghostWhite.500'}
+                            color={(location === 'https://https://beautyawer.vercel.app') ? 'tartOrange.500' : 'ghostWhite.500'}
                             size='sm'
                             mr={2}
     
