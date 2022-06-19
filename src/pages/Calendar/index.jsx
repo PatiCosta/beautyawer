@@ -17,7 +17,7 @@ function Day({day, quantityOfAppointments, startHourOfDay, endHourOfDay, noAppoi
             borderColor={isDayToday ? 'tartOrange.500' : 'ghostWhite.500'}
             color='ghostWhite.500'
             bgColor={isDayToday ? 'gunmetal.400' : 'gunmetal.500'}
-            px={{sm: 2, md: 4}}
+            px={{base: 1, sm: 2, md: 4}}
             py={1}
             cursor={noAppointments ? 'auto' : 'pointer'}
             transition='all .2s ease'
@@ -76,12 +76,12 @@ export function Calendar() {
     const { isOpen, onOpen, onClose} = useDisclosure()
     const isLargerThanLg = useBreakpointValue({ base: false, xl: true })
 
-
     return (
         <>
             <PageWrapper>
                 <Box
-                    p={6}
+                    py={6}
+                    px={{base: 2, sm: 6}}
                     flex='1'
 
                     ml={isLargerThanLg ? '14vw' : 0}
@@ -133,7 +133,7 @@ export function Calendar() {
                     </Flex>
                     <Grid
                         templateColumns='repeat(7, 1fr)'
-                        gap={{sm: 2, md: 5}}
+                        gap={{base: 1, sm: 2, md: 5}}
                         mt={4}
                     >
                         <Text color='ghostWhite.500' fontWeight='light' fontSize={{sm: 'xs', md: 'sm', lg: 'md'}}>Dom</Text>

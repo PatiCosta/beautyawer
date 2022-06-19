@@ -99,7 +99,7 @@ export function ViewAppointment({isOpen, onClose, appointment}) {
 
     return (
       <>
-        {isOpen && <Modal isOpen={isOpen} onClose={onClose} size={{sm: 'full', md: '3xl'}}>
+        {isOpen && <Modal isOpen={isOpen} onClose={onClose} size={{base: 'full', md: '3xl'}}>
           <ModalOverlay />
           <ModalContent bgColor='gunmetal.400' color='ghostWhite.500'>
             <ModalHeader>Visualizar agendamento</ModalHeader>
@@ -303,7 +303,7 @@ export function ViewAppointment({isOpen, onClose, appointment}) {
                   </Button>
                   :
                   <Button colorScheme='tartOrange' mr={2}>
-                      Confirmar agendamento
+                      Confirmar
                   </Button>
                 }
                 <Button mr={3} onClick={onClose} colorScheme='gunmetal'>
@@ -312,9 +312,6 @@ export function ViewAppointment({isOpen, onClose, appointment}) {
               </Flex>
               {appointment.status !== 'completo' && <Button colorScheme='cadetBlue'>
                   Salvar
-              </Button>}
-              {appointment.status === 'completo' && <Button colorScheme='gunmetal'>
-                  Fechar
               </Button>}
             </ModalFooter>
           </ModalContent>

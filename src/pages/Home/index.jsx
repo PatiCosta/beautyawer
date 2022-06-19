@@ -58,8 +58,8 @@ export function Home() {
                         <Flex justifyContent='space-between'>
                             <Flex alignItems='center'>
                                 {!isLargerThanLg && <Nav />}
-                                <Text fontSize={{sm: 'lg', md: 'xl', lg: '2xl'}}>
-                                    Agendamentos de hoje
+                                <Text fontSize={{sm: 'sm',  md: 'xl', lg: '2xl'}}>
+                                    Agenda de hoje
                                 </Text>
                             </Flex>
                             <Flex alignItems='center'>
@@ -187,7 +187,7 @@ export function Home() {
                             />
                         </Grid>
                         <Grid
-                            templateColumns={{sm: '.3fr 1fr 1.5fr 1.2fr', xl: '.3fr 1fr 1fr 1.8fr .9fr'}}
+                            templateColumns={{base: '.3fr 1fr 1.5fr 1.2fr', xl: '.3fr 1fr 1fr 1.8fr .9fr'}}
                             alignItems='center'
                             boxShadow='dark-lg'
                             mt={4}
@@ -216,16 +216,16 @@ export function Home() {
                             </Badge>
                             <Box
                                 py={4}
-                                px={8}
+                                px={{base: 4, sm: 8}}
                                 textAlign='center'
                             >
-                                <Text fontWeight='bold' fontSize={{sm: 'sm', md: 'md'}}>13h00</Text>
-                                <Text fontSize={{sm: 'xs', md: 'sm'}}>até</Text>
-                                <Text fontWeight='bold' fontSize={{sm: 'sm', md: 'md'}}>13h30</Text>
+                                <Text fontWeight='bold' fontSize={{base: 'xs', sm: 'sm', md: 'md'}}>13h00</Text>
+                                <Text fontSize={{base: 'xs', md: 'sm'}}>até</Text>
+                                <Text fontWeight='bold' fontSize={{base: 'xs', sm: 'sm', md: 'md'}}>13h30</Text>
                             </Box>
-                            <Box p={4}>
-                                <Text fontWeight='bold' fontSize={{sm: 'sm', md: 'md'}}>Gabriel Alves</Text>
-                                <Text fontSize={{sm: 'xs', md: 'sm'}} color='gray.400'>Primeiro atendimento</Text>
+                            <Box py={4} px={{base: 'none', sm: 4}}>
+                                <Text fontWeight='bold' fontSize={{base: 'sm', md: 'md'}}>Gabriel Alves</Text>
+                                <Text fontSize={{base: 'xx-small', md: 'sm'}} color='gray.400'>Primeiro atendimento</Text>
                             </Box>
                             <Grid
                                 templateColumns='1fr 1fr'
@@ -233,7 +233,7 @@ export function Home() {
                                 gap={2}
                                 p={4}
 
-                                display={{sm: 'none', xl: 'grid'}}
+                                display={{base: 'none', xl: 'grid'}}
                             >
                                 <Tag colorScheme='cadetBlue' size='sm'>Corte</Tag>
                                 <Tag colorScheme='cadetBlue' size='sm'>Lavagem</Tag>
@@ -244,7 +244,7 @@ export function Home() {
                                 ml='auto'
                                 px={4}
                                 fontWeight='bold'
-                                fontSize={{sm: 'sm', md: 'md', lg: 'lg'}}
+                                fontSize={{base: 'sm', md: 'md', lg: 'lg'}}
                                 color='cadetBlue.500'
                             >
                                 R$ 286,00

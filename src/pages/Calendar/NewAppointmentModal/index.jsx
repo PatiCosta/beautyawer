@@ -116,12 +116,12 @@ export function NewAppointmentModal() {
 
     return (
       <>
-        <Button colorScheme='tartOrange' onClick={onOpen} size={{sm: 'sm', md: 'md'}}>
+        <Button colorScheme='tartOrange' onClick={onOpen} size={{base: 'sm', md: 'md'}}>
             <Icon as={CalendarPlus} h={5} w={5} mr={{sm: 0, lg: 2}} />
-            <Text display={{sm: 'none', lg: 'inline-block'}}>agendamento</Text>
+            <Text display={{base: 'none', lg: 'inline-block'}}>agendamento</Text>
         </Button>
   
-        {isOpen && <Modal isOpen={isOpen} onClose={onClose} size={{sm: 'full', md: '3xl'}}>
+        {isOpen && <Modal isOpen={isOpen} onClose={onClose} size={{base: 'full', md: '3xl'}}>
           <ModalOverlay />
           <ModalContent bgColor='gunmetal.400' color='ghostWhite.500'>
             <ModalHeader>Novo agendamento</ModalHeader>
@@ -129,6 +129,7 @@ export function NewAppointmentModal() {
             <ModalBody>
               <Flex
                 alignItems='center'
+                flexDirection={{base: 'column', sm: 'row'}}
               >
                 <DatePicker
                   selected={startDate}
@@ -139,7 +140,7 @@ export function NewAppointmentModal() {
                   locale={ptBR}
                   customInput={<DatePickerInput label='Início' />}
                 />
-                <Text fontWeight='bold' mx={{sm: 4, md: 6}} fontSize={{sm: 'sm', md: 'md'}}>até</Text>
+                <Text fontWeight='bold' mx={{sm: 4, md: 6}} my={{base: 2, sm: 0}} fontSize={{sm: 'sm', md: 'md'}}>até</Text>
                 <DatePicker
                   selected={endDate}
                   onChange={(date) => setEndDate(date)}

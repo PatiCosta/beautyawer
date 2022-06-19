@@ -23,7 +23,7 @@ function Appointment({onClick, startHour, endHour, customer, isFirstAppointment,
 
     return (
         <Grid
-            templateColumns={{sm: '1fr 1fr 1fr', xl: '1fr 1.5fr 1.5fr 1fr'}}
+            templateColumns={{base: '1fr 1fr 1fr', xl: '1fr 1.5fr 1.5fr 1fr'}}
             alignItems='center'
             boxShadow='2xl'
             mt={4}
@@ -78,7 +78,7 @@ export function AppointmentsOfTheDay({isOpen, onClose}) {
 
     return (
         <>
-            {isOpen && <Modal isOpen={isOpen} onClose={onClose} size={{sm: 'full', md: '5xl'}}>
+            {isOpen && <Modal isOpen={isOpen} onClose={onClose} size={{base: 'full', md: '5xl'}}>
             <ModalOverlay />
             <ModalContent bgColor='gunmetal.400' color='ghostWhite.500'>
                 <ModalHeader>Agendamentos do dia</ModalHeader>
@@ -193,8 +193,10 @@ export function AppointmentsOfTheDay({isOpen, onClose}) {
                     <Flex
                         alignItems='center'
                         justifyContent='space-between'
-                        p={8}
-                        fontSize={{sm: 'sm', md: 'md', lg: 'lg'}}
+                        py={8}
+                        px={{base: 2, sm: 8}}
+                        fontSize={{base: 'sm', md: 'md', lg: 'lg'}}
+                        flexDirection={{base: 'column', sm: 'row'}}
                     >
                         <Flex>
                             <Text>Das</Text>
