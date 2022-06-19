@@ -51,7 +51,7 @@ export function Home() {
                     templateColumns={{sm: '1fr', xl: '1.4fr .6fr'}}
                     py={8}
                     px={4}
-                    mb={{base: 12, sm: 0}}
+                    pb={{base: 12, sm: 0}}
                     gap={{sm: 0, lg: 8}}
                     ml={isLargerThanLg ? '14vw' : 0}
                 >
