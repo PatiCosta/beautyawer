@@ -43,14 +43,7 @@ function NavButton({linkTo, title, icon}) {
 }
 
 export function Nav() {
-    const location = window.location.href.replace('https://', '').replace('/', '').replace('.', '').replace('beautyawer', '').replace('vercel', '').replace('app', '')
-    
-    console.log(location)
-    console.log(window.location.href.replace('https://', ''))
-    console.log(window.location.href.replace('https://', '').replace('/', ''))
-    console.log(window.location.href.replace('https://', '').replace('/', '').replace('.', ''))
-    console.log(window.location.href.replace('https://', '').replace('/', '').replace('.', '').replace('beautyawer', ''))
-    console.log(window.location.href.replace('https://', '').replace('/', '').replace('.', '').replace('beautyawer', '').replace('vercel', ''))
+    const location = window.location.href.replaceAll('https://', '').replaceAll('/', '').replaceAll('.', '').replaceAll('beautyawer', '').replaceAll('vercel', '').replaceAll('app', '')
     const isLargerThanLg = useBreakpointValue({ base: false, xl: true })
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = useRef()
