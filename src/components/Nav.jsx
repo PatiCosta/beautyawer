@@ -303,7 +303,7 @@ export function Nav() {
                             <Flex my={2}>
                                 <Button
                                     colorScheme='gunmetal'
-                                    color={(location === 'http://localhost:3000/') ? 'tartOrange.500' : 'ghostWhite.500'}
+                                    color={(location === '') ? 'tartOrange.500' : 'ghostWhite.500'}
                                     size='sm'
                                     mr={2}
             
