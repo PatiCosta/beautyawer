@@ -43,7 +43,7 @@ function NavButton({linkTo, title, icon}) {
 }
 
 export function Nav() {
-    const location = window.location.href.replace('https://beautyawer.vercel.app', '')
+    const location = window.location.href.replace('https://beautyawer.vercel.app/', '')
     console.log(location)
     console.log((location === ''))
     const isLargerThanLg = useBreakpointValue({ base: false, xl: true })
