@@ -20,7 +20,7 @@ import { Notifications } from "./Notifications";
 
 
 function NavButton({linkTo, title, icon}) {
-    const location = window.location.href.replace(process.env.REACT_APP_URL, '')
+    const location = window.location.href.replace('https://https://beautyawer.vercel.app/', '')
 
     return (
         <Button
@@ -43,7 +43,7 @@ function NavButton({linkTo, title, icon}) {
 }
 
 export function Nav() {
-    const location = window.location.href.replace(process.env.REACT_APP_URL, '')
+    const location = window.location.href.replace('https://https://beautyawer.vercel.app/', '')
     const isLargerThanLg = useBreakpointValue({ base: false, xl: true })
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = useRef()
